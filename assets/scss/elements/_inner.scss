@@ -1,0 +1,24 @@
+
+
+.inner-default{
+      --color-gray-2: #0f132e;
+      --color-gray: #ffffff;
+      .contact-info .contact-icon {
+            background: rgb(101 198 255 / 9%);
+      }
+      .contact-info .para {
+            color: #ffffff;
+      }
+      .service-card-v1 {
+            border: 1px solid rgb(171 171 171 / 9%);
+      }
+      .signle-side-bar .tags-wrapper .tag-link {
+            background: #070824;
+            &:hover{
+                  color: var(--color-gray);
+            }
+      }
+      .contact-info {
+            background: var(--color-gray-2);
+      }
+}

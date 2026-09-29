@@ -1,0 +1,102 @@
+@use "../default" as *;
+
+.tmp-on-hover-animation {
+    position: relative;
+
+    .tmp-bg-highlight {
+        position: absolute;
+        bottom: -3px;
+        content: "";
+        background: linear-gradient(90.03deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 48%, rgba(255, 255, 255, 0) 100%);
+        width: 100%;
+        height: 1px;
+        transition: var(--trans);
+        opacity: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .rbt-product-nav-grp {
+        li {
+            .rbt-product-nav {
+
+                &:hover,
+                &.active {
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    &.rbt-product-nav-var-primary {
+        .rbt-product-nav-grp {
+            li {
+                .rbt-product-nav {
+                    &.active {
+                        background: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// ANimation 2
+@keyframes moveright {
+    from {
+        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+    }
+
+    to {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+.move-right {
+    animation: moveright 1s linear;
+}
+
+.move-left {
+    animation: moveLeft 1s linear;
+}
+
+.move-down {
+    animation: movedown 1s linear;
+}
+
+@keyframes movedown {
+    from {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    }
+
+    to {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+.move-up {
+    animation: moveup 1s linear;
+}
+
+@keyframes moveup {
+    from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+

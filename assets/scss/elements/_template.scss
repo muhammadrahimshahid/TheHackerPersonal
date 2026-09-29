@@ -1,0 +1,118 @@
+@use "../default" as *;
+
+.tmp-section{
+    z-index: 1;
+    position: relative;
+}
+
+
+.home-technician{
+    background-color: var(--tmp-technician-bg);
+}
+.home-main{
+    @extend .home-technician;
+}
+.home-model, .home-designer{
+    background-color: #090925;
+}
+.home-dev{
+    @extend .home-technician;
+}
+
+
+.demo-clip-none{
+    .banner-style-3 .content-wrapper{
+        clip-path: none;
+        border-radius: 10px;
+    }
+    .tmp-service-box, .service-style-3,
+    .tmp-service-box::after, .service-style-3::after{
+        clip-path: none;
+    }
+    .blog-style-3 .thumbnail a,
+    .modern-testimonial-activation .testimonial-style-3{
+        display: block;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .portfolio-style-3 .thumbnail{
+        clip-path: none;
+        a{
+            display: block;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+    }
+    .tmp-service-box::after, .service-style-3::after,
+    .tmp-service-box, .service-style-3,
+    .tmp-skill-full::before,
+    .tmp-skill-full,
+    .testimonial-modern-left-card,
+    .testimonial-modern-left-card::before,
+    .modern-testimonial-activation .testimonial-style-3,
+    .modern-testimonial-activation .testimonial-style-3::before,
+    .testimonial-modern-left-card .content,
+    .contact-form-style-1.variation-3::before,
+    .contact-form-style-1.variation-3,
+    .tmp-contact-info,
+    .tmp-contact-info::before{
+        border-radius: 10px;
+    }
+    .tmp-skill-full,
+    .tmp-skill-full::before,
+    .blog-style-3 .thumbnail a,
+    .testimonial-modern-left-card,
+    .testimonial-modern-left-card::before,
+    .modern-testimonial-activation .testimonial-style-3,
+    .modern-testimonial-activation .testimonial-style-3::before,
+    .contact-form-style-1.variation-3,
+    .contact-form-style-1.variation-3::before,
+    .tmp-contact-info,
+    .tmp-contact-info::before{
+        clip-path: none;
+    }
+    .contact-form-style-1.variation-3{
+        background-color: #10102B;
+    }
+    .tmp-contact-info{
+        background: #10102B;
+    }
+    .contact-form-style-1.variation-3 .tmp-contact-form-shape{
+        display: none;
+    }
+    .tmp-skill-full{
+        border: none;
+        display: block;
+        overflow: hidden;
+    }
+    .tmp-service-box, .service-style-3{
+        overflow: hidden;
+        display: block;
+    }
+    .banner-style-3 .thumbnail .main-thumbnail img {
+        width: auto;
+        height: 630px;
+        @media #{$large-mobile} {
+            height: auto;
+        }
+    }
+    .banner-style-3 .content-wrapper {
+        padding-top: 100px;
+        @media #{$large-mobile} {
+            padding-top: 35px;
+        }
+    }
+    .banner-style-3 .thumbnail .tmp-siback {
+        left: 14%;
+    }
+}
+
+.footer-style-box .top-footer-area .right-area input{
+    &::placeholder{
+        color: var(--color-body);
+    }
+}
+
+
+
+

@@ -1,0 +1,652 @@
+@use "../default" as *;
+
+// designer resume
+.desinger-resume-bg {
+    background: #120C3B;
+}
+
+.resume-shape {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.tmp-education {
+    padding: 50px 40px;
+    background-color: rgba(#93F2FF, $alpha: 0.02);
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+
+    @media #{$lg-layout} {
+        padding: 30px 20px;
+    }
+
+    @media #{$md-layout} {
+        padding: 50px 40px;
+    }
+
+    @media #{$sm-layout}{
+        padding: 40px;
+    }
+
+    @media #{$large-mobile} {
+        padding: 20px;
+    }
+    .tmp-title{
+        i{
+            opacity: .3;
+            margin-right: 6px;
+        }
+    }
+}
+
+.single-education-item {
+    padding: 30px 40px 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(#93F2FF, $alpha: 0.05);
+    @media #{$large-mobile} {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 30px 25px 30px;
+    }
+}
+
+.is-grid-two {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media #{$sm-layout}{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .single-education-item {
+        background-color: rgba(#293263, $alpha: 0.2);
+        padding: 20px;
+    }
+}
+
+
+
+
+// doctor Resume
+.main-resume {
+    &.is-doctor {
+        background-color: rgba(#311E69, $alpha: 0.2);
+        margin: 0 30px;
+        border-radius: 50px;
+        @media #{$md-layout}{
+            margin: 0;
+            border-radius: 0;
+        }
+        @media #{$sm-layout} {
+            margin: 0;
+            border-radius: 6px;
+        }
+        .tmp-funfact-single {
+            background: linear-gradient(180deg, #FFFFFF1C 0%, #FFF0 100.53%);
+
+            &::before {
+                background: linear-gradient(180deg, #0F0C32 0%, #0F0C32 100.53%);
+            }
+        }
+    }
+}
+
+
+
+.main-resume {
+    background-color: var(--color-secondary-alt);
+}
+
+
+
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--width);
+    }
+}
+// skill marque
+.tmp-skill-marque {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    max-width: max-content;
+    margin: 0 auto;
+    position: relative;
+    height: 390px;
+    gap: 15px;
+
+    .single-marque{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        animation: moveUp 16s linear infinite;
+
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        background: linear-gradient(180deg, rgba(34, 14, 96, 0) 0%, var(--color-secondary-alt) 100%);
+        transform: matrix(1, 0, 0, -1, 0, 0);
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: linear-gradient(180deg, rgba(34, 14, 96, 0) 0%, var(--color-secondary-alt) 100%);
+        bottom: 0;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        z-index: 10;
+    }
+}
+
+
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.demo-doctor{
+    .tmp-skill-marque::after {
+        background: linear-gradient(180deg, rgba(34, 14, 96, 0) 0%, #100c32 100%);
+    }
+    .tmp-skill-marque::before {
+        background: linear-gradient(180deg, rgba(34, 14, 96, 0) 0%, #100c32 100%);
+    }
+}
+
+.tmp-skill-marque-single {
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 0 auto;
+    }
+
+    &.figma {
+        background-color: rgba(#F34D1D, $alpha: 0.1);
+    }
+
+    &.photoshop {
+        background-color: rgba(#00A7FF, $alpha: 0.1);
+    }
+
+    &.xd {
+        background-color: rgba(#2E001F, $alpha: 0.37);
+    }
+
+    &.react {
+        background-color: rgba(#464646, $alpha: 0.35);
+    }
+
+    &.in {
+        background-color: rgba(#FF069B, $alpha: 0.3);
+    }
+}
+
+// funfact
+.tmp-funfact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @media #{$smlg-device} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media #{$md-layout} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media #{$sm-layout} {
+        gap: 10px;
+    }
+    @media #{$large-mobile}{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    &-single {
+        padding: 30px 24px;
+        max-width: max-content;
+        background: linear-gradient(180deg, #311587 0%, rgba(49, 21, 135, 0) 106.38%);
+        border-radius: 6px;
+        text-align: center;
+        min-width: 205px;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        @media #{$laptop-device}{
+            min-width: 170px;
+            padding: 30px 15px;
+        }
+        @media #{$lg-layout}{
+            min-width: 100%;
+        }
+        @media #{$mdsm-layout} {
+            min-width: 100%;
+        }
+
+        &::before {
+            position: absolute;
+            height: 98%;
+            width: 98%;
+            content: "";
+            background: linear-gradient(180deg, #260F70 0%, #260F70 100.53%);
+
+            border-radius: 6px;
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        h2 {
+            @media #{$sm-layout} {
+                font-size: 32px;
+            }
+            .counter{
+                color: #D6DAF0;
+            }
+            margin-bottom: 5px;
+            line-height: 1;
+            color: var(--color-primary);
+        }
+    }
+}
+
+.tmp-big-icon {
+    margin-top: 85px;
+
+    i {
+        font-size: 100px;
+        color: #93f2ff0d;
+        line-height: 1;
+        @media #{$laptop-device}{
+            font-size: 80px;
+        }
+    }
+}
+
+
+
+.tmp-skill-section {
+    background: linear-gradient(180deg, rgba(255, 154, 80, 0.17) 0%, rgba(7, 8, 36, 0) 100%);
+    border-radius: 50px 50px 0px 0px;
+    @media #{$lg-layout}{
+        border-radius: 0;
+    }
+    @media #{$sm-layout} {
+        border-radius: 0 0 0 0;
+    }
+}
+ /* developer skill ara */
+
+.developer-skill-section{
+    background: linear-gradient(180deg, rgba(147, 242, 255, 0.17) 0%, rgba(7, 8, 36, 0) 100%);
+    border-radius: 50px 50px 0px 0px;
+    @media #{$lg-layout}{
+        border-radius: 0;
+    }
+    @media #{$smlg-device} {
+        border-radius: 0;
+    }
+    .tmp-skill-card-box .tmp-skill-shape .tmp-shover {
+        background: #93F2FF;
+    }
+    .tmp-skill-card:hover .tmp-skill-card-title {
+        color: var(--color-primary);
+    }
+    .tmp-skill-full .tmp-skill-shape {
+        background-color: var(--color-primary);
+    }
+    .tmp-skill-full-inner .tmp-skill-single .tmp-skill-grade {
+        color: var(--color-primary);
+    }
+}
+
+.tmp-skill-card {
+    &-box {
+        overflow: hidden;
+        clip-path: polygon(0.239% 2.697%, 0.239% 2.697%, 0.271% 2.298%, 0.365% 1.919%, 0.516% 1.566%, 0.718% 1.244%, 0.966% 0.957%, 1.256% 0.711%, 1.581% 0.511%, 1.937% 0.362%, 2.32% 0.269%, 2.723% 0.236%, 49.913% 0.236%, 83.533% 0.236%, 83.533% 0.236%, 83.782% 0.249%, 84.027% 0.285%, 84.264% 0.345%, 84.494% 0.428%, 84.714% 0.532%, 84.922% 0.657%, 85.118% 0.802%, 85.299% 0.966%, 85.463% 1.148%, 85.611% 1.348%, 99.181% 21.855%, 99.181% 21.855%, 99.257% 21.977%, 99.326% 22.103%, 99.386% 22.232%, 99.439% 22.365%, 99.484% 22.5%, 99.521% 22.637%, 99.55% 22.777%, 99.571% 22.918%, 99.584% 23.06%, 99.588% 23.204%, 99.588% 97.235%, 99.588% 97.235%, 99.556% 97.634%, 99.461% 98.012%, 99.311% 98.365%, 99.109% 98.688%, 98.861% 98.974%, 98.571% 99.22%, 98.246% 99.42%, 97.889% 99.57%, 97.507% 99.663%, 97.104% 99.695%, 2.723% 99.695%, 2.723% 99.695%, 2.32% 99.663%, 1.937% 99.57%, 1.581% 99.42%, 1.256% 99.22%, 0.966% 98.974%, 0.718% 98.688%, 0.516% 98.365%, 0.365% 98.012%, 0.271% 97.634%, 0.239% 97.235%, 0.239% 2.697%);
+        background-color: rgba($color: #fff, $alpha: 0.1);
+        position: relative;
+        padding: 30px 64px;
+        z-index: 1;
+        @media #{$laptop-device} {
+            padding: 26px;
+        }
+        &>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            height: 99%;
+            width: 99%;
+            background-color: #10102B;
+            clip-path: polygon(0.239% 2.697%, 0.239% 2.697%, 0.271% 2.298%, 0.365% 1.919%, 0.516% 1.566%, 0.718% 1.244%, 0.966% 0.957%, 1.256% 0.711%, 1.581% 0.511%, 1.937% 0.362%, 2.32% 0.269%, 2.723% 0.236%, 49.913% 0.236%, 83.533% 0.236%, 83.533% 0.236%, 83.782% 0.249%, 84.027% 0.285%, 84.264% 0.345%, 84.494% 0.428%, 84.714% 0.532%, 84.922% 0.657%, 85.118% 0.802%, 85.299% 0.966%, 85.463% 1.148%, 85.611% 1.348%, 99.181% 21.855%, 99.181% 21.855%, 99.257% 21.977%, 99.326% 22.103%, 99.386% 22.232%, 99.439% 22.365%, 99.484% 22.5%, 99.521% 22.637%, 99.55% 22.777%, 99.571% 22.918%, 99.584% 23.06%, 99.588% 23.204%, 99.588% 97.235%, 99.588% 97.235%, 99.556% 97.634%, 99.461% 98.012%, 99.311% 98.365%, 99.109% 98.688%, 98.861% 98.974%, 98.571% 99.22%, 98.246% 99.42%, 97.889% 99.57%, 97.507% 99.663%, 97.104% 99.695%, 2.723% 99.695%, 2.723% 99.695%, 2.32% 99.663%, 1.937% 99.57%, 1.581% 99.42%, 1.256% 99.22%, 0.966% 98.974%, 0.718% 98.688%, 0.516% 98.365%, 0.365% 98.012%, 0.271% 97.634%, 0.239% 97.235%, 0.239% 2.697%);
+            z-index: -1;
+        }
+
+        .tmp-skill-shape {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+
+            .tmp-siback {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                height: 105px;
+                width: 105px;
+                z-index: -1;
+            }
+
+            .tmp-shover {
+                position: absolute;
+                left: 50%;
+                bottom: -38%;
+                height: 93px;
+                width: 93px;
+                z-index: -1;
+                transform: translateX(-50%);
+                background: #FF9A50;
+                opacity: 0;
+                transition: var(--trans);
+                filter: blur(75px);
+            }
+        }
+
+        &:hover {
+            .tmp-shover {
+                opacity: 1;
+            }
+
+        }
+
+        .tmp-skill-card-icon {
+            img {
+                max-width: 68px;
+                max-height: 68px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+
+    &:hover {
+        .tmp-skill-card-title {
+            color: var(--tmp-tec);
+        }
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 0;
+        font-family: var(--font-secondary);
+        transition: var(--trans);
+        text-transform: capitalize;
+    }
+}
+
+/*======= skill card 2 =======*/
+.tmp-skill-full {
+    padding: 82px 45px 45px 55px;
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    clip-path: polygon(99.845% 96.305%, 99.845% 13.293%, 99.845% 13.293%, 99.815% 12.732%, 99.727% 12.198%, 99.587% 11.701%, 99.398% 11.248%, 99.166% 10.844%, 98.896% 10.498%, 98.592% 10.216%, 98.26% 10.006%, 97.903% 9.875%, 97.527% 9.829%, 25.048% 9.829%, 25.048% 9.829%, 24.816% 9.812%, 24.589% 9.761%, 24.368% 9.677%, 24.155% 9.562%, 23.951% 9.416%, 23.757% 9.242%, 23.575% 9.04%, 23.406% 8.81%, 23.252% 8.556%, 23.115% 8.277%, 20.239% 1.784%, 20.239% 1.784%, 20.102% 1.504%, 19.948% 1.25%, 19.779% 1.021%, 19.597% 0.818%, 19.403% 0.644%, 19.199% 0.498%, 18.985% 0.383%, 18.765% 0.299%, 18.537% 0.248%, 18.306% 0.231%, 2.473% 0.231%, 2.473% 0.231%, 2.097% 0.276%, 1.74% 0.408%, 1.408% 0.618%, 1.104% 0.899%, 0.834% 1.246%, 0.602% 1.649%, 0.413% 2.103%, 0.273% 2.6%, 0.185% 3.133%, 0.155% 3.695%, 0.155% 96.305%, 0.155% 96.305%, 0.185% 96.867%, 0.273% 97.4%, 0.413% 97.897%, 0.602% 98.351%, 0.834% 98.754%, 1.104% 99.101%, 1.408% 99.382%, 1.74% 99.592%, 2.097% 99.724%, 2.473% 99.769%, 97.527% 99.769%, 97.527% 99.769%, 97.903% 99.724%, 98.26% 99.592%, 98.592% 99.382%, 98.896% 99.101%, 99.166% 98.754%, 99.398% 98.351%, 99.587% 97.897%, 99.727% 97.4%, 99.815% 96.867%, 99.845% 96.305%);
+    position: relative;
+    @media #{$smlg-device} {
+        padding: 82px 30px 30px 30px;
+    }
+    @media #{$large-mobile}{
+        padding: 82px 40px 45px 35px;
+    }
+    .tmp-skill-shape {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        width: 260px;
+        height: 150px;
+        background-color: var(--tmp-tec);
+        transform: translate(-50%, -50%);
+        opacity: 0.4;
+        filter: blur(125px);
+
+    }
+
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 1px;
+        top: 1px;
+        width: 99.7%;
+        height: 99.5%;
+        background-color: #10102B;
+        clip-path: polygon(99.845% 96.305%, 99.845% 13.293%, 99.845% 13.293%, 99.815% 12.732%, 99.727% 12.198%, 99.587% 11.701%, 99.398% 11.248%, 99.166% 10.844%, 98.896% 10.498%, 98.592% 10.216%, 98.26% 10.006%, 97.903% 9.875%, 97.527% 9.829%, 25.048% 9.829%, 25.048% 9.829%, 24.816% 9.812%, 24.589% 9.761%, 24.368% 9.677%, 24.155% 9.562%, 23.951% 9.416%, 23.757% 9.242%, 23.575% 9.04%, 23.406% 8.81%, 23.252% 8.556%, 23.115% 8.277%, 20.239% 1.784%, 20.239% 1.784%, 20.102% 1.504%, 19.948% 1.25%, 19.779% 1.021%, 19.597% 0.818%, 19.403% 0.644%, 19.199% 0.498%, 18.985% 0.383%, 18.765% 0.299%, 18.537% 0.248%, 18.306% 0.231%, 2.473% 0.231%, 2.473% 0.231%, 2.097% 0.276%, 1.74% 0.408%, 1.408% 0.618%, 1.104% 0.899%, 0.834% 1.246%, 0.602% 1.649%, 0.413% 2.103%, 0.273% 2.6%, 0.185% 3.133%, 0.155% 3.695%, 0.155% 96.305%, 0.155% 96.305%, 0.185% 96.867%, 0.273% 97.4%, 0.413% 97.897%, 0.602% 98.351%, 0.834% 98.754%, 1.104% 99.101%, 1.408% 99.382%, 1.74% 99.592%, 2.097% 99.724%, 2.473% 99.769%, 97.527% 99.769%, 97.527% 99.769%, 97.903% 99.724%, 98.26% 99.592%, 98.592% 99.382%, 98.896% 99.101%, 99.166% 98.754%, 99.398% 98.351%, 99.587% 97.897%, 99.727% 97.4%, 99.815% 96.867%, 99.845% 96.305%);
+    }
+
+    &-inner {
+        .tmp-card-title {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: left !important;
+            @media #{$lg-layout}{
+                font-size: 26px;
+            }
+            @media #{$md-layout}{
+                font-size: 24px;
+            }
+        }
+
+        .tmp-skill-single {
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                @media #{$sm-laptop} {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .tmp-skill-year {
+                margin-bottom: 10px;
+                display: block;
+                font-size: 12px;
+            }
+
+            .tmp-skill-grade {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 12px;
+                font-weight: 700;
+                font-family: var(--font-secondary);
+                color: var(--tmp-tec);
+            }
+        }
+    }
+}
+
+
+.tmp-custom-card {
+    &.work-card,
+    &.blog-card {
+
+        .tmp-left,
+        .tmp-right,
+        .tmp-bottom,
+        .tmp-bottom-right {
+
+            &::after,
+            &::before {
+                background-color: var(--color-secondary);
+            }
+
+        }
+
+    }
+}
+
+.tmp-custom-card {
+    &.service-slider {
+        padding: 45px 40px;
+    }
+}
+
+/*-------------------------
+    Resume Style One  
+---------------------------*/
+
+.resume-style-1 {
+    height: 100%;
+    .resume-card {
+        padding: 40px;
+        @media #{$laptop-device}{
+            padding: 30px;
+        }
+        @media #{$lg-layout}{
+            padding: 25px;
+        }
+    }
+    .tmp-resume {
+        .content {
+            max-width: max-content;
+            @media #{$mdsm-layout}{
+                max-width: 100%;
+            }
+        }
+    
+        .tmp-skill-name {
+            margin-bottom: 10px;
+        }
+    
+        .tmp-skill-grade {
+            color: var(--color-primary) !important;
+        }
+    }
+    .main-title {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-align: left !important;
+        @media #{$large-mobile} {
+            font-size: 24px;
+        }
+    }
+
+    .title {
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .time-and-grade {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .time {
+        display: block;
+        font-size: 12px;
+    }
+    .skill-grade {
+        color: var(--color-primary);
+        font-size: 12px;
+        font-weight: 700;
+        font-family: var(--font-secondary);
+    }
+    .subtitle {
+        font-size: var(--small);
+        margin-bottom: 0 !important;
+    }
+
+    // interview
+    .tmp-interview {
+        .tmp-ivi {
+            img {
+                max-width: 40px;
+                max-height: 40px;
+                margin: 0 auto;
+            }
+        }
+        .tmp-ivi-content {
+            .tmp-ivi-date {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+// Progress Bar Style One
+.tmp-skill-progress {
+    .tmp-progress {
+        h6 {
+            color: var(--color-body);
+        }
+    }
+    .progress {
+        height: 10px;
+        border-radius: 10px;
+        background-color: rgba(#fff, $alpha: 0.1);
+        &-bar {
+            background-color: var(--color-primary);
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

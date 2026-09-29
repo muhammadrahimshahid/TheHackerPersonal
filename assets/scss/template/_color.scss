@@ -1,0 +1,13 @@
+@use "../default" as *;
+
+body {
+	&.color-primary {
+		--color-primary: var(--color-primary); 
+	}
+	&.color-primary-2nd {
+		--color-primary: var(--color-primary-2nd); 
+	}
+	&.color-tmp-tec {
+		--color-primary: var(--tmp-tec); 
+	}
+}
