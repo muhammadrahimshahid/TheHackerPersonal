@@ -1,0 +1,73 @@
+
+:root {
+
+    // font family
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Montserrat", sans-serif;
+    
+
+    // color
+    --color-body: #D7D9FF;
+    --tmp-tec-heading: #D6DAF0;
+    --tmp-tec: #FF9A50;
+    --color-dark: #070721;
+    --color-darker: #10102B;
+
+    --color-success: #3EB75E;
+    --color-danger: #FF0003;
+
+    --gradient-box : linear-gradient(to right, #5237f9, #FF014F);
+
+    // main template
+    --color-primary: #93F2FF;
+    --color-primary-alt: #00e1ff;
+    --color-heading: #d6daf0;
+    --color-secondary: #4D4DFF;
+    --color-secondary-alt: #220E60;
+    --color-white: #fff;
+    --color-border: rgba(255, 255, 255, 0.1);
+
+    // background color
+    --tmp-technician-bg: #070824;
+    --color-gray-2: #141414;
+    --color-gray: #9F9F9F;
+    --tmp-main-bg: #070824;
+
+    // font size
+    --h1: 74px;
+    --h2: 48px;
+    --h3: 34px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 16px;
+    --p: 16px;
+    --small: 14px;
+
+    --font-size-b5: 24px;
+    --font-size-b4: 18px;
+    --font-size-b3: 16px;
+    --font-size-b2: 14px;
+    --font-size-b1: 12px;
+
+    --trans: all 0.3s ease-in;
+
+    //transition easing
+    --transition: all 0.4s ease-in-out;
+
+
+}
+
+
+// Layouts Variation
+$smlg-device: 'only screen and (max-width: 1199px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$sm-laptop: 'only screen and (max-width: 1399px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$mdsm-layout:'only screen and (max-width: 991px)';
+$mdsm-layout:'only screen and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';   
+

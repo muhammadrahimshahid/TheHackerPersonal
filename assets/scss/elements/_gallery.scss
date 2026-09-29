@@ -1,0 +1,121 @@
+@use "../default" as *;
+
+.model-gallery-section {
+    background-color: #161630;
+    position: relative;
+
+    &-shape {
+        position: absolute;
+        top: -170px;
+        right: -100px;
+        width: 460px;
+        height: 460px;
+        border-radius: 50%;
+        background: linear-gradient(134.57deg, rgba(3, 3, 6, 0.4) 16.81%, rgba(43, 37, 73, 0.4) 85.71%);
+
+        @media #{$mdsm-layout} {
+            display: none;
+        }
+
+        @media #{$lg-layout} {
+            top: -150px;
+            right: -80px;
+            width: 380px;
+            height: 380px;
+        }
+    }
+}
+
+
+
+.tmp-rotate-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #93F2FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #070721;
+
+    i {
+        transform: rotate(-35deg);
+        transition: var(--trans);
+    }
+
+    &:hover {
+        background: #93F2FF;
+        color: #070721;
+
+        i {
+            transform: rotate(0);
+        }
+    }
+}
+
+.tmp-gallery{
+    border-radius: 6px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    .video-icon{
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 10px;
+        transition: 0.4s;
+        .btn-default{
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+
+
+
+            padding: 0 28px;
+            border-radius: 5px;
+            background: var(--color-primary);
+            transition-duration: 300ms;
+            color: var(--color-white);
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: var(--shadow-light);
+            display: flex;
+            line-height: 49px;
+            letter-spacing: 0.5px;
+            transition: 0.4s;
+            border: 0 none;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.6s;
+            border-radius: 50%;
+            span{
+                i{
+                    display: inline-block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 30px;
+                    color: var(--color-dark);
+                }
+            }
+        }
+    }
+    .video-icon {
+        opacity: 0;
+        transition: 0.4s;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    &:hover {
+        .video-icon {
+            opacity: 1;
+            margin-top: 0;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

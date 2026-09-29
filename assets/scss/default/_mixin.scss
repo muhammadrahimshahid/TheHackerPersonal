@@ -1,0 +1,48 @@
+@use "sass:list";
+
+
+
+%background{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+%ul-style{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+%position-style{
+    position: absolute;
+    content: '';
+}
+%position-common{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    left: 0;
+    top: 0;
+}
+%flex-common{
+    display: flex;
+    align-items: center;
+}
+
+@mixin config-bg-colors($prefix, $bg-color-...) {
+    @each $i in $bg-color- {
+        .#{$prefix}#{list.nth($i, 1)} {
+            background: list.nth($i, 2);
+        }
+    }
+}
+
+
+
+@mixin config-colors($prefix, $color-...) {
+    @each $i in $color- {
+        .#{$prefix}#{list.nth($i, 1)} {
+            color: list.nth($i, 2) !important;
+        }
+    }
+}

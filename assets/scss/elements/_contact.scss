@@ -1,0 +1,652 @@
+@use "../default" as *;
+
+// contact
+.designer-contact-card {
+    background-color: rgba(#93F2FF, $alpha: 0.02);
+    padding: 50px 40px 40px;
+    border-radius: 10px;
+    border: 2px solid var(--color-border);
+
+    @media #{$lg-layout} {
+        padding: 40px 25px 25px;
+    }
+}
+
+
+
+
+.contact-option-card {
+    &.is-doctor {
+        background-color: transparent !important;
+    }
+}
+
+
+
+
+.tmp-contact-form {
+    &-shape {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background: var(--color-primary);
+        border-radius: 50%;
+        bottom: 5%;
+        right: 15%;
+        filter: blur(100px);
+        z-index: -1;
+    }
+}
+
+
+
+.tmp-contact-info {
+    clip-path: polygon(0.239% 2.697%, 0.239% 2.697%, 0.271% 2.298%, 0.365% 1.919%, 0.516% 1.566%, 0.718% 1.244%, 0.966% 0.957%, 1.256% 0.711%, 1.581% 0.511%, 1.937% 0.362%, 2.32% 0.269%, 2.723% 0.236%, 49.913% 0.236%, 83.533% 0.236%, 83.533% 0.236%, 83.782% 0.249%, 84.027% 0.285%, 84.264% 0.345%, 84.494% 0.428%, 84.714% 0.532%, 84.922% 0.657%, 85.118% 0.802%, 85.299% 0.966%, 85.463% 1.148%, 85.611% 1.348%, 99.78% 8.64%, 99.54% 20.6%, 99.62% 23.23%, 99.326% 22.103%, 99.386% 22.232%, 99.439% 22.365%, 99.484% 22.5%, 99.521% 22.637%, 99.55% 22.777%, 99.571% 22.918%, 99.584% 23.06%, 99.588% 23.204%, 99.588% 97.235%, 99.588% 97.235%, 99.556% 97.634%, 99.461% 98.012%, 99.311% 98.365%, 99.109% 98.688%, 98.861% 98.974%, 98.571% 99.22%, 98.246% 99.42%, 97.889% 99.57%, 97.507% 99.663%, 97.104% 99.695%, 2.723% 99.695%, 2.723% 99.695%, 2.32% 99.663%, 1.937% 99.57%, 1.581% 99.42%, 1.256% 99.22%, 0.966% 98.974%, 0.718% 98.688%, 0.516% 98.365%, 0.365% 98.012%, 0.271% 97.634%, 0.239% 97.235%, 0.239% 2.697%);
+    background: rgba(#fff, $alpha: 0.1);
+    position: relative;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    line-height: 20px;
+    height: 100%;
+    @media #{$sm-layout} {
+        clip-path: none;
+        background: #10102B;
+        padding: 40px;
+        border-radius: 6px;
+    }
+
+    @media #{$large-mobile} {
+        padding: 25px;
+    }
+
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 99.8%;
+        height: 99.8%;
+        background: #10102B;
+        left: 1px;
+        top: 1px;
+        z-index: -1;
+
+        @media #{$sm-layout} {
+            clip-path: none;
+            background: #10102B;
+        }
+
+        clip-path: polygon(0.239% 2.697%, 0.239% 2.697%, 0.271% 2.298%, 0.365% 1.919%, 0.516% 1.566%, 0.718% 1.244%, 0.966% 0.957%, 1.256% 0.711%, 1.581% 0.511%, 1.937% 0.362%, 2.32% 0.269%, 2.723% 0.236%, 49.913% 0.236%, 83.533% 0.236%, 83.533% 0.236%, 83.782% 0.249%, 84.027% 0.285%, 84.264% 0.345%, 84.494% 0.428%, 84.714% 0.532%, 84.922% 0.657%, 85.118% 0.802%, 85.299% 0.966%, 85.463% 1.148%, 85.611% 1.348%, 99.78% 8.64%, 99.54% 20.6%, 99.62% 23.23%, 99.326% 22.103%, 99.386% 22.232%, 99.439% 22.365%, 99.484% 22.5%, 99.521% 22.637%, 99.55% 22.777%, 99.571% 22.918%, 99.584% 23.06%, 99.588% 23.204%, 99.588% 97.235%, 99.588% 97.235%, 99.556% 97.634%, 99.461% 98.012%, 99.311% 98.365%, 99.109% 98.688%, 98.861% 98.974%, 98.571% 99.22%, 98.246% 99.42%, 97.889% 99.57%, 97.507% 99.663%, 97.104% 99.695%, 2.723% 99.695%, 2.723% 99.695%, 2.32% 99.663%, 1.937% 99.57%, 1.581% 99.42%, 1.256% 99.22%, 0.966% 98.974%, 0.718% 98.688%, 0.516% 98.365%, 0.365% 98.012%, 0.271% 97.634%, 0.239% 97.235%, 0.239% 2.697%);
+    }
+
+    &.variation-2 {
+        background-color: rgba(147, 242, 255, 0.02);
+        padding: 50px;
+        border-radius: 10px;
+        border: 2px solid var(--color-border);
+        clip-path: initial;
+        @media #{$smlg-device} {
+            padding: 30px;
+        }
+        @media #{$large-mobile} {
+            padding: 20px;
+        }
+        &::before {
+            display: none;
+        }
+    }
+
+
+}
+
+.tmp-icon {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: #070824;
+    position: relative;
+
+    i {
+        color: var(--color-primary);
+        font-size: 12px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 26px;
+        height: 26px;
+        background: rgba(#fff, $alpha: 0.1);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 22px;
+        background: rgba(#93F2FF, $alpha: 0.1);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.single-contact-info {
+    max-width: 285px;
+
+    @media #{$md-layout} {
+        max-width: 100%;
+    }
+
+    p {
+        span {
+            color: var(--color-primary);
+        }
+    }
+
+    .tmp-action {
+        font-size: 14px;
+
+        span {
+            font-weight: 500;
+        }
+    }
+}
+
+// developer contact form
+.tmp-contact-info {
+    &.if-developer {
+        .single-contact-info {
+            .tmp-icon i {
+                color: var(--color-primary);
+            }
+
+            p span {
+                color: var(--color-primary);
+            }
+        }
+
+        .tmp-submit-btn {
+            background: var(--color-primary);
+            border: 1px solid transparent;
+
+            &:hover {
+                border-color: var(--color-primary);
+                background: transparent;
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+
+
+/*------------------------------
+    Contact Form Style 01 
+--------------------------------*/
+.form-group {
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+.contact-form-style-1 {
+    background-color: #10102B;
+    .title {
+        font-weight: 700;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-control {
+        font-size: 14px;
+        border: 2px solid var(--color-border);
+        color: var(--color-body);
+        border-radius: 8px !important;
+        background-color: rgba(123, 115, 115, 0.1);
+
+        @media #{$large-mobile} {
+            width: 100%;
+        }
+        &.padding-15{
+            padding: 15px 15px;
+        }
+        &:focus{
+            border-width: 2px !important;
+        }
+    }
+
+    textarea {
+        height: 194px;
+        @media #{$sm-layout} {
+            height: 180px;
+        }
+    }
+    &.variation-2 {
+        background-color: rgba(147, 242, 255, 0.02);
+        padding: 50px 40px 40px;
+        border-radius: 10px;
+        border: 2px solid var(--color-border);
+        @media #{$smlg-device} {
+            padding: 25px;
+        }
+        @media #{$sm-layout} {
+            padding: 25px 15px;
+        }
+        .contact-form {
+            @media #{$laptop-device} {
+                gap: 25px;
+            }
+            @media #{$lg-layout} {
+                gap: 15px;
+            }
+            .tmp-submit-btn {
+                @media #{$lg-layout} {
+                    padding: 13px 25px;
+                    margin-top: 10px;
+                }
+            }
+            .form-control {
+                background-color: rgba(#7B7373, $alpha: 0.1);
+            }
+        }
+    }
+
+    &.variation-3 {
+        clip-path: polygon(100% 96.52%, 100% 13.123%, 100% 13.123%, 99.97% 12.559%, 99.881% 12.023%, 99.74% 11.524%, 99.551% 11.068%, 99.319% 10.662%, 99.048% 10.314%, 98.743% 10.031%, 98.409% 9.82%, 98.052% 9.688%, 97.674% 9.643%, 24.971% 9.643%, 24.971% 9.643%, 24.738% 9.625%, 24.511% 9.574%, 24.289% 9.49%, 24.075% 9.374%, 23.87% 9.228%, 23.675% 9.053%, 23.493% 8.849%, 23.323% 8.619%, 23.169% 8.363%, 23.031% 8.083%, 20.147% 1.56%, 20.147% 1.56%, 20.009% 1.279%, 19.855% 1.024%, 19.686% 0.793%, 19.503% 0.59%, 19.309% 0.415%, 19.103% 0.269%, 18.889% 0.153%, 18.668% 0.069%, 18.44% 0.017%, 18.208% 0%, 2.326% 0%, 2.326% 0%, 1.948% 0.046%, 1.591% 0.177%, 1.257% 0.388%, 0.952% 0.671%, 0.681% 1.019%, 0.449% 1.425%, 0.26% 1.881%, 0.119% 2.38%, 0.03% 2.916%, 0% 3.48%, 0% 96.52%, 0% 96.52%, 0.03% 97.084%, 0.119% 97.62%, 0.26% 98.119%, 0.449% 98.575%, 0.681% 98.981%, 0.952% 99.328%, 1.257% 99.612%, 1.591% 99.823%, 1.948% 99.954%, 2.326% 100%, 97.674% 100%, 97.674% 100%, 98.052% 99.954%, 98.409% 99.823%, 98.743% 99.612%, 99.048% 99.328%, 99.319% 98.981%, 99.551% 98.575%, 99.74% 98.119%, 99.881% 97.62%, 99.97% 97.084%, 100% 96.52%);
+        position: relative;
+        padding: 100px 40px 50px 40px;
+        background: rgba(#fff, $alpha: 0.1);
+        .tmp-contact-form{
+            .tmp-contact-title{
+                @media #{$large-mobile} {
+                    font-size: 24px;
+                }
+                @media #{$small-mobile} {
+                    font-size: 22px;
+                }
+            }
+        }
+        @media #{$sm-layout} {
+            clip-path: none;
+            background: #10102B;
+            padding: 40px;
+            border-radius: 6px;
+        }
+    
+        @media #{$large-mobile} {
+            padding: 25px;
+        }
+    
+        &::before {
+            clip-path: polygon(100% 96.52%, 100% 13.123%, 100% 13.123%, 99.97% 12.559%, 99.881% 12.023%, 99.74% 11.524%, 99.551% 11.068%, 99.319% 10.662%, 99.048% 10.314%, 98.743% 10.031%, 98.409% 9.82%, 98.052% 9.688%, 97.674% 9.643%, 24.971% 9.643%, 24.971% 9.643%, 24.738% 9.625%, 24.511% 9.574%, 24.289% 9.49%, 24.075% 9.374%, 23.87% 9.228%, 23.675% 9.053%, 23.493% 8.849%, 23.323% 8.619%, 23.169% 8.363%, 23.031% 8.083%, 20.147% 1.56%, 20.147% 1.56%, 20.009% 1.279%, 19.855% 1.024%, 19.686% 0.793%, 19.503% 0.59%, 19.309% 0.415%, 19.103% 0.269%, 18.889% 0.153%, 18.668% 0.069%, 18.44% 0.017%, 18.208% 0%, 2.326% 0%, 2.326% 0%, 1.948% 0.046%, 1.591% 0.177%, 1.257% 0.388%, 0.952% 0.671%, 0.681% 1.019%, 0.449% 1.425%, 0.26% 1.881%, 0.119% 2.38%, 0.03% 2.916%, 0% 3.48%, 0% 96.52%, 0% 96.52%, 0.03% 97.084%, 0.119% 97.62%, 0.26% 98.119%, 0.449% 98.575%, 0.681% 98.981%, 0.952% 99.328%, 1.257% 99.612%, 1.591% 99.823%, 1.948% 99.954%, 2.326% 100%, 97.674% 100%, 97.674% 100%, 98.052% 99.954%, 98.409% 99.823%, 98.743% 99.612%, 99.048% 99.328%, 99.319% 98.981%, 99.551% 98.575%, 99.74% 98.119%, 99.881% 97.62%, 99.97% 97.084%, 100% 96.52%);
+            position: absolute;
+            content: '';
+            width: 99.8%;
+            height: 99.7%;
+            background: #10102B;
+            left: 1px;
+            top: 1px;
+            z-index: -1;
+            @media #{$sm-layout} {
+                clip-path: none;
+                background: #10102B;
+            }
+        }
+    
+        .tmp-contact-form-shape {
+            background: var(--color-primary);
+            filter: blur(100px);
+
+        }
+    }
+
+    &.variation-4 {
+        background-color: rgba(147, 242, 255, 0.02);
+        padding: 50px;
+        border-radius: 10px;
+        border: 2px solid var(--color-border);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        @media #{$smlg-device} {
+            padding: 30px;
+        }
+        @media #{$large-mobile} {
+            padding: 20px;
+        }
+        .tmp-contact-form{
+            .tmp-contact-title{
+                @media #{$large-mobile} {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+
+
+    
+}
+
+
+.bg-main{
+    background: #070824;
+}
+
+.contact-address-style-1 {
+    background-color: #10102B;
+    .single-contact-info {
+        & > * {
+            position: relative;
+            z-index: 1;
+        }
+        .icon {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+            background: #070824;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 26px;
+                height: 26px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 22px;
+                height: 22px;
+                background: rgba(147, 242, 255, 0.1);
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+            i {
+                color: var(--color-primary);
+                font-size: 12px;
+            }
+        }
+    }
+    .title {
+        font-weight: 700;
+        margin-top: 20px;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media #{$mdsm-layout} {
+            align-items: flex-start;
+        }
+        .single-contact-info {
+            line-height: 20px;
+
+            @media #{$laptop-device} {
+                margin-top: 3px;
+            }
+
+            @media #{$lg-layout} {
+                margin-top: 1px;
+            }
+
+            .text-small {
+                margin-bottom: -5px;
+            }
+        }
+    }
+}
+
+
+/*------------------------------
+    Contact Form Style 02 
+--------------------------------*/
+.contact-address-style-2 {
+    title {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .single-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: rgba(#93F2FF, $alpha: 0.02);
+        padding: 40px 32px;
+        border-radius: 10px;
+        border: 2px solid var(--color-border);
+    
+        @media #{$large-mobile} {
+            padding: 30px 20px;
+        }
+    
+        .icon {
+            font-size: 20px;
+            color: var(--color-primary);
+            display: grid;
+            place-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: rgba(#7B7373, $alpha: 0.1);
+        }
+    
+        .content {
+            a {
+                transition: var(--trans);
+    
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+}
+
+
+
+.contact-info {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 50px 0;
+    width: 100%;
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 73, 74, 0.2);
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary);
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+    .title {
+        color: var(--color-heading);
+        font-family: var(--font-primary);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+    .para {
+        color: var(--color-gray);
+        font-family: var(--font-secondary);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+#form-messages{
+    &.error{
+        color: var(--color-danger);
+    }
+    &.success{
+        color: var(--color-success);
+    }
+}
+.get-in-touch-wrapper {
+    border-radius: 10px;
+    background: var(--color-gray-2);
+    padding: 20px 30px;
+    @media (min-width: 576px) {
+        padding: 80px 60px;
+    }
+    @media #{$md-layout} {
+        padding: 40px 40px;
+    }
+    @media #{$sm-layout} {
+        padding: 30px 20px;
+    }
+}
+.contact-form-inner-page {
+    .contact-form-wrapper {
+        .form-group {
+            margin-bottom: 0;
+            border: none !important;
+            input {
+                background: transparent;
+                height: inherit;
+                padding: 15px 20px;
+                font-size: 16px;
+                color: var(--color-heading);
+                font-weight: 600;
+                border-radius: 10px;
+                border: 2px solid var(--color-border);
+                width: 100%;
+                &:focus {
+                    border-color: var(--color-primary);
+                }
+
+                &::placeholder {
+                    color: var(--color-gray);
+                    font-family: var(--font-secondary);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                }
+            }
+
+            textarea {
+                background: transparent;
+                font-size: 16px;
+                color: var(--color-heading);
+                font-weight: 600;
+                border-radius: 10px;
+                border: 2px solid var(--color-border);
+                width: 100%;
+                height: 150px;
+                padding: 20px;
+                &::placeholder {
+                    color: var(--color-gray);
+                    font-family: var(--font-secondary);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                }
+                
+                &:focus {
+                    border:2px solid var(--color-primary) !important;
+                }
+            }
+
+           
+        }
+    }
+
+    .tpm-btn-primary {
+        width: 100%;
+
+        button {
+            justify-content: center;
+        }
+
+        span {
+            justify-content: center;
+        }
+    }
+}
+.get-in-touch-area{
+    .section-sub-title{
+        .subtitle{
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+    }
+    .section-head{
+        .title{
+            color: var(--color-heading);
+            font-family: var(--font-primary);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 0;
+            margin-bottom: 20px;
+            @media #{$sm-layout} {
+                font-size: 34px;
+            }
+            @media #{$large-mobile} {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.contact-style-one-wrapper{
+    .color-border-shape-secondary.border-gap-40.right-info{
+        .contact-info{
+            padding: 0 0 !important;
+            .title{
+                font-size: 20px;
+            }
+        }
+    }
+}
